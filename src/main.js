@@ -1,5 +1,11 @@
 import { createApp } from 'vue'
-import './style.css'
+import 'preline';
 import App from './App.vue'
+import router  from "./router.js";
+import store from "./store.js";
+import './style.css'
 
-createApp(App).mount('#app')
+createApp(App)
+    .use(router)
+    .use(store)
+    .mount('#app')
